@@ -155,7 +155,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4741209895235724, guid: afe3ba2db5fdf4247842585ca7216cb3, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1990196349006788, guid: afe3ba2db5fdf4247842585ca7216cb3, type: 2}
       propertyPath: m_Name
@@ -201,7 +201,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4741209895235724, guid: afe3ba2db5fdf4247842585ca7216cb3, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: afe3ba2db5fdf4247842585ca7216cb3, type: 2}
@@ -296,7 +296,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4735926349197492, guid: 8635a3a7383b0c0459c5a72cdc883430, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8635a3a7383b0c0459c5a72cdc883430, type: 2}
@@ -338,57 +338,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4741209895235724, guid: afe3ba2db5fdf4247842585ca7216cb3, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1990196349006788, guid: afe3ba2db5fdf4247842585ca7216cb3, type: 2}
       propertyPath: m_Name
       value: Plataforma 1x1 (3)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: afe3ba2db5fdf4247842585ca7216cb3, type: 2}
-  m_IsPrefabParent: 0
---- !u!1001 &1514529279
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4741209895235724, guid: afe3ba2db5fdf4247842585ca7216cb3, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -6.475098
-      objectReference: {fileID: 0}
-    - target: {fileID: 4741209895235724, guid: afe3ba2db5fdf4247842585ca7216cb3, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4741209895235724, guid: afe3ba2db5fdf4247842585ca7216cb3, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4741209895235724, guid: afe3ba2db5fdf4247842585ca7216cb3, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4741209895235724, guid: afe3ba2db5fdf4247842585ca7216cb3, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4741209895235724, guid: afe3ba2db5fdf4247842585ca7216cb3, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4741209895235724, guid: afe3ba2db5fdf4247842585ca7216cb3, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4741209895235724, guid: afe3ba2db5fdf4247842585ca7216cb3, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1990196349006788, guid: afe3ba2db5fdf4247842585ca7216cb3, type: 2}
-      propertyPath: m_Name
-      value: Plataforma 1x1 (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: afe3ba2db5fdf4247842585ca7216cb3, type: 2}
@@ -408,7 +362,7 @@ GameObject:
   - component: {fileID: 1517951595}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -486,7 +440,7 @@ Transform:
   m_Children:
   - {fileID: 1661627052}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1517951593
 BoxCollider2D:
@@ -548,6 +502,8 @@ MonoBehaviour:
   maxSpeed: 3
   grounded: 0
   jumpPower: 9.25
+  maxCoinAmmount: 5
+  coin: {fileID: 1265562117291438, guid: 01bfb2b87d945064184f2f3a695c0800, type: 2}
 --- !u!1 &1661627051
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,16 +8,27 @@ public class PlayerController : MonoBehaviour {
     public float maxSpeed = 5f;
     public bool grounded;
     public float jumpPower = 6.5f;
+    public int maxCoinAmmount = 5;
+
+
+    public GameObject coin;
+    
 
     private Rigidbody2D rb2d;
     private Animator anim;
     private bool jump;
+    private float timeSinceLastDrop = 0.0f;
+    private float dropInterval = 3.0f;
+    private myGlobalVars myVars;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
+        myVars = GetComponentInParent<myGlobalVars>();
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-	}
+        spawnCoin();
+        dropInterval = Random.Range(2.0f, 5.0f);
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -28,7 +39,17 @@ public class PlayerController : MonoBehaviour {
         {
             jump = true;
         }
-	}
+
+        if (timeSinceLastDrop >= dropInterval&&myGlobalVars.coinsNow<maxCoinAmmount)
+        {
+            spawnCoin();
+            myGlobalVars.coinsNow++;
+            timeSinceLastDrop = 0;
+            dropInterval = Random.Range(2.0f, 5.0f);
+        }
+        else
+            timeSinceLastDrop += Time.deltaTime;
+    }
 
     private void FixedUpdate()
     {
@@ -66,5 +87,11 @@ public class PlayerController : MonoBehaviour {
     private void OnBecameInvisible()
     {
         transform.position = new Vector3(-1, 0, 0);
+    }
+
+    private void spawnCoin()
+    {
+        Vector2 position = new Vector2(Random.Range(-10, -1), -1);
+        Instantiate(coin, position, Quaternion.identity);
     }
 }
